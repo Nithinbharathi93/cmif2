@@ -42,7 +42,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3==3.7.6,hostpython3==3.7.6,kivy,pillow,opencv-python==4.6.0.66,opencv-contrib-python==4.6.0.66,numpy==1.21.6
+requirements = python3==3.7.6,hostpython3==3.7.6,kivy,pillow,opencv-python==4.6.0.66,opencv-contrib-python==4.6.0.66,numpy==1.21.6,android.permissions
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -106,12 +106,12 @@ fullscreen = 1
 # (list) Permissions
 # (See https://python-for-android.readthedocs.io/en/latest/buildoptions/#build-options-1 for all the supported syntaxes and properties)
 #android.permissions = android.permission.INTERNET, (name=android.permission.WRITE_EXTERNAL_STORAGE;maxSdkVersion=18)
-android.permissions = CAMERA
+android.permissions = CAMERA,INTERNET,READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE
 # (list) features (adds uses-feature -tags to manifest)
 #android.features = android.hardware.usb.host
 
 # (int) Target Android API, should be as high as possible.
-#android.api = 31
+android.api = 31
 
 # (int) Minimum API your APK / AAB will support.
 #android.minapi = 21
